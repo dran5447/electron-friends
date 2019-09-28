@@ -2,15 +2,53 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Hello Electron</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <h1>Online Friends</h1>
 
-    <!-- You can also require other files to run in this process -->
+    <div class="card">
+      <div class="card-body"> 
+        <h5 class="card-title">Joe</h5>
+        <p class="card-text">Editing <a href="test2.doc" class="btn btn-primary">test2.doc</a></p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-body"> 
+        <h5 class="card-title">Joe</h5>
+        <p class="card-text">Editing <a href="test2.doc" class="btn btn-primary">test2.doc</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body"> 
+        <h5 class="card-title">Joe</h5>
+        <p class="card-text">Editing <a href="test2.doc" class="btn btn-primary">test2.doc</a></p>
+      </div>
+    </div>
+
+
     <script src="./renderer.js"></script>
-  </body>
+
+    <script>
+      //todo update to trigger random events to add people to list and send notification
+
+      showNotification('James')
+
+      function showNotification(name) {
+        var res = new Notification(
+          name + ' is online', {
+            body: 'Chat with your friend now',
+            badge: 'https://image.flaticon.com/icons/png/512/46/46651.png',
+            icon: 'https://image.flaticon.com/icons/png/512/46/46651.png',
+            sticky: false,
+          }
+        )
+      }
+    
+    </script>
+
+      </body>
 </html>
